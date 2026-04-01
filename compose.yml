@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma-data:/chroma-data
+      - docs-data:/docs
+
+volumes:
+  chroma-data:
+  docs-data:
